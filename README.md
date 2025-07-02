@@ -36,7 +36,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 * **Griffin Gore** - *Author* - [Ghgore](https://github.com/Ghgore)
 
-See also the list of [contributors](https://github.com/Ghgore/3DPrintStore/contributors) who participated in this project.
+See the list of [contributors](https://github.com/Ghgore/3DPrintStore/contributors) who participated in this project.
 
 ## License
 
