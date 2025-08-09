@@ -1,0 +1,45 @@
+@3DPrintStoreBackendAPI_HostAddress = https://localhost:7150
+@_3DPrintStoreBackendAPI_HostAddress = http://localhost:5296
+
+GET {{_3DPrintStoreBackendAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{3DPrintStoreBackendAPI_HostAddress}}/api/printables
+Content-Type: application/json
+
+{
+  "Name": "Cube of Red",
+  "Tags": ["cool", "awesome", "insightful"],
+  "URL": "https://picsum.photos/350/200",
+  "Verified": true,
+  "Filaments": ["PLA", "PETG", "ABS"],
+  "Downloads": 100,
+  "Rating": 4.5,
+  "AuthorId": 1
+}
+
+###
+
+@id=1
+PUT {{3DPrintStoreBackendAPI_HostAddress}}/api/printables/{{id}}
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Name": "Cube of Red",
+  "Tags": ["cool", "awesome", "insightful"],
+  "URL": "https://picsum.photos/350/200",
+  "Verified": true,
+  "Filaments": ["PLA", "PETG", "ABS"],
+  "Downloads": 101,
+  "Rating": 4.5,
+  "AuthorId": 1
+}
+
+###
+
+GET {{3DPrintStoreBackendAPI_HostAddress}}/api/printables
+
+###
