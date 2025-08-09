@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<PrintableContext>(opt =>
-    opt.UseSqlServer(builder.Configuration["PrintStoreContext"]/* ?? throw new InvalidOperationException("Connection string invalid")*/));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DockerSQLServer")/* ?? throw new InvalidOperationException("Connection string invalid")*/));
 
 var app = builder.Build();
 
