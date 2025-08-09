@@ -365,3 +365,5 @@ FodyWeavers.xsd
 Migrations/
 app.db
 Notes.txt
+._*
+._.gitignore
