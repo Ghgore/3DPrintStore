@@ -33,10 +33,14 @@ Content-Type: application/json
   "URL": "https://picsum.photos/350/200",
   "Verified": true,
   "Filaments": ["PLA", "PETG", "ABS"],
-  "Downloads": 101,
+  "Downloads": 102,
   "Rating": 4.5,
   "AuthorId": 1
 }
+
+###
+
+GET {{3DPrintStoreBackendAPI_HostAddress}}/api/printables
 
 ###
 
