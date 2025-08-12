@@ -1,0 +1,31 @@
+services:
+  website:
+    build:
+      context: /Volumes/Extreme SSD/Projects/3DPrintStore/WebFrontend
+    user: root
+    environment:
+      NODE_ENV: development
+    ports:
+      - "8080:3000"
+    #volumes:
+    #  - /Volumes/Extreme SSD/Projects/3DPrintStore/WebFrontend/:/usr/src/app
+    #  - /usr/src/app/node_modules
+  api:
+    build:
+      context: /Volumes/Extreme SSD/Projects/3DPrintStore/BackendAPI/3DPrintStoreBackendAPI
+    user: root
+    ports:
+      - "7150:8080"
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    user: root
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password$1
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverstorage:/var/opt/mssql/data
+
+volumes:
+  sqlserverstorage:
